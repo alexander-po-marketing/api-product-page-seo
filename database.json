@@ -1,0 +1,14 @@
+{
+  "semaglutide": {
+    "description": "Medication used to control blood sugar in diabetes, reduce weight, and lower cardiovascular risk in selected adults.",
+    "usApproved": "YES",
+    "otherApproved": "YES",
+    "patents": "45",
+    "indications": "12",
+    "therapeuticCategories": "Blood Glucose Lowering Agents; GLP-1 Agonists; Incretin Mimetics",
+    "mechanism": "Glucagon-like peptide 1 receptor agonist",
+    "synonyms": "Semaglutide base; Semaglutide acetate; Ozempic®; Wegovy®; Rybelsus®",
+    "pharmacopoeia": "Appears in USP, EP, BP, or JP depending on supplier monograph availability",
+    "grades": "Base and acetate salt; micronized or specific purity grades on request"
+  }
+}
