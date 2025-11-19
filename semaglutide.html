@@ -10,22 +10,26 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body class="api-page">
-  <div class="hero-artwork">
-        <img src="assets/Header.svg" alt="Illustration showing Semaglutide sourcing intelligence" loading="lazy">
-      </div>
-  <header class="api-hero" id="top">
+  <header class="api-hero" id="top" aria-expanded="true">
+    <div class="hero-artwork" aria-hidden="true">
+      <img src="assets/Header.svg" alt="Illustration showing Semaglutide sourcing intelligence" loading="lazy">
+    </div>
     <div class="hero-inner">
-      <div class="hero-main">
-        <div class="hero-text">
+      <div class="hero-summary" role="region" aria-label="Semaglutide hero summary">
+        <div class="summary-text">
           <p class="eyebrow">GLP-1 receptor agonist API</p>
           <h1>Semaglutide API Suppliers and Manufacturers</h1>
           <p class="lede">Semaglutide – GLP-1 analog for type 2 diabetes and chronic weight management therapies.</p>
+        </div>
+        <div class="hero-actions" aria-label="Primary Semaglutide actions">
+          <a class="button primary" href="#suppliers">Browse suppliers</a>
+          <a class="button ghost" href="#smart-sourcing">Request Smart Sourcing</a>
+          <a class="button tertiary" href="#tech-modal" data-open-modal="tech-modal">Open technical profile</a>
+        </div>
+      </div>
+      <div class="hero-main">
+        <div class="hero-text">
           <p class="aka">Also known as: NN9535 · Ozempic · Rybelsus · 910463-68-2 · NNC 0113-0217</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#suppliers">Browse suppliers</a>
-            <a class="button ghost" href="#smart-sourcing">Request Smart Sourcing</a>
-            <a class="button tertiary" href="#tech-modal" data-open-modal="tech-modal">Open technical profile</a>
-          </div>
           <div class="hero-links">
             <a href="#indication-modal" class="inline-link" data-open-modal="indication-modal">Indication (full text)</a>
             <span aria-hidden="true">•</span>
@@ -63,6 +67,7 @@
       </div>
     </div>
   </header>
+  <div class="hero-sentinel" aria-hidden="true"></div>
 
   <main class="page-shell">
     <div class="page-grid">
@@ -658,6 +663,34 @@
       );
 
       sections.forEach((section) => observer.observe(section));
+
+      const hero = document.querySelector('.api-hero');
+      const heroMain = hero?.querySelector('.hero-main');
+      const heroSentinel = document.querySelector('.hero-sentinel');
+
+      if (hero && heroSentinel) {
+        const updateHeroState = () => {
+          const shouldCondense = heroSentinel.getBoundingClientRect().top <= 80;
+          hero.classList.toggle('condensed', shouldCondense);
+          hero.setAttribute('aria-expanded', shouldCondense ? 'false' : 'true');
+          if (heroMain) {
+            heroMain.setAttribute('aria-hidden', shouldCondense ? 'true' : 'false');
+          }
+        };
+
+        let ticking = false;
+        const onScroll = () => {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(() => {
+            updateHeroState();
+            ticking = false;
+          });
+        };
+
+        updateHeroState();
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
 
       const setContent = (selector, value, { html = false } = {}) => {
         if (!value) return;
