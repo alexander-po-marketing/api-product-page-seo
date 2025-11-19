@@ -5234,26 +5234,29 @@ body.api-page {
   padding: 0 24px;
 }
 
+
 .api-page .page-shell {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px 80px;
+  padding: 0 20px 64px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
 }
+
 
 .api-page .page-grid {
   display: grid;
   grid-template-columns: minmax(0, 2.5fr) minmax(280px, 1fr);
-  gap: 32px;
+  gap: 24px;
   align-items: flex-start;
 }
+
 
 .api-page .page-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
 }
 
 .api-page .page-sidebar {
@@ -5267,8 +5270,8 @@ body.api-page {
 .api-page .sidebar-card {
   background: #ffffff;
   border: 1px solid #e6edf3;
-  border-radius: 20px;
-  padding: 24px;
+  border-radius: 16px;
+  padding: 20px;
   box-shadow: 0 24px 50px rgba(15, 35, 53, 0.08);
 }
 
@@ -5409,10 +5412,10 @@ body.api-page {
 .api-page .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 24px 48px;
+  padding: 64px 20px 40px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
   position: relative;
   z-index: 1;
 }
@@ -5498,7 +5501,7 @@ body.api-page {
 .api-page .hero-main {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 40px;
+  gap: 24px;
   align-items: start;
 }
 
@@ -5807,10 +5810,10 @@ body.api-page {
 .api-page .hero-meta {
   background: #ffffff;
   border: 1px solid #e6edf3;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 14px;
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .api-page .meta-item {
@@ -5827,10 +5830,10 @@ body.api-page {
 
 .api-page .meta-item.highlight {
   background: #f7f9fb;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   border: 1px dashed #c7d7e4;
 }
 
@@ -5851,8 +5854,8 @@ body.api-page {
 }
 
 .api-page .section-block {
-  padding: 32px;
-  border-radius: 24px;
+  padding: 24px;
+  border-radius: 18px;
   background: #ffffff;
   border: 1px solid #e6edf3;
   box-shadow: 0 24px 60px rgba(15, 35, 53, 0.07);
@@ -5877,15 +5880,15 @@ body.api-page {
 .api-page .spec-table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-  margin: 16px 0;
+  gap: 10px;
+  margin: 14px 0;
 }
 
 .api-page .spec-table div {
   background: #ffffff;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 1px solid #e6edf3;
-  padding: 14px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -6010,8 +6013,8 @@ body.api-page {
 .api-page .smart-cta {
   background: #ffffff;
   border: 1px solid #e6edf3;
-  border-radius: 16px;
-  padding: 18px;
+  border-radius: 12px;
+  padding: 16px;
   box-shadow: 0 15px 40px rgba(12, 12, 12, 0.05);
 }
 
@@ -6023,9 +6026,9 @@ body.api-page {
 
 .api-page .market-price article {
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: 14px;
   border: 1px solid #e6edf3;
-  padding: 20px;
+  padding: 18px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 }
 
@@ -6068,10 +6071,10 @@ body.api-page {
 .api-page .card {
   background: #ffffff;
   border: 1px solid #e6edf3;
-  border-radius: 12px;
-  padding: 18px;
+  border-radius: 10px;
+  padding: 16px;
   display: grid;
-  gap: 12px;
+  gap: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
@@ -6095,8 +6098,8 @@ body.api-page {
   gap: 10px;
   background: #ffffff;
   border: 1px solid #e6edf3;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 14px;
 }
 
 .api-page .tech-row {
@@ -6370,15 +6373,15 @@ body.api-page {
 .api-page .info-card {
   background: #ffffff;
   border: 1px solid #e6edf3;
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 14px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .api-page .info-card.small {
-  padding: 14px;
+  padding: 12px;
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .api-page .card-top {
@@ -6694,17 +6697,17 @@ body.modal-open {
 
 @media (max-width: 768px) {
   .api-page .page-shell {
-    padding: 0 16px 60px;
-    gap: 24px;
+    padding: 0 14px 48px;
+    gap: 20px;
   }
 
   .api-page .section-block {
-    padding: 24px;
+    padding: 20px;
   }
 
   .api-page .hero-main {
     grid-template-columns: 1fr;
-    padding: 24px;
+    padding: 20px;
   }
 
   .api-page .hero-visual {
