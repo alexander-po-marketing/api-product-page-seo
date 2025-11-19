@@ -26,6 +26,21 @@
         <div class="hero-actions">
           <a class="button primary" href="#suppliers">View suppliers</a>
           <a class="button ghost" href="#semaglutide-overview">Technical overview</a>
+          <a class="button tertiary" href="#tech-modal" data-open-modal="tech-modal">See full specs</a>
+        </div>
+        <div class="hero-quick"> 
+          <div class="quick-chip">
+            <span class="label">Synonyms</span>
+            <span class="value" data-modal-field="synonyms">Semaglutide base; Semaglutide acetate</span>
+          </div>
+          <div class="quick-chip">
+            <span class="label">Pharmacopoeia</span>
+            <span class="value" data-modal-field="pharmacopoeia">USP / EP / BP / JP</span>
+          </div>
+          <div class="quick-chip">
+            <span class="label">Approvals</span>
+            <span class="value"><span data-modal-field="usApproved">YES</span> US · <span data-modal-field="otherApproved">YES</span> other</span>
+          </div>
         </div>
       </div>
       <div class="hero-meta">
@@ -33,9 +48,20 @@
         <div class="meta-item"><span class="label">Molecular formula</span><span class="value">C187H291N45O59</span></div>
         <div class="meta-item"><span class="label">Therapeutic class</span><span class="value">GLP-1 receptor agonist</span></div>
         <div class="meta-item"><span class="label">Primary forms</span><span class="value">Injection solution</span></div>
+        <div class="meta-item highlight"><span class="label">Popup access</span><span class="value">Open specs &amp; full supplier list</span><a class="inline-link" href="#tech-modal" data-open-modal="tech-modal">Open technical popup</a></div>
       </div>
     </div>
   </header>
+
+  <nav class="sticky-nav" aria-label="Page navigation">
+    <a href="#semaglutide-overview">Overview</a>
+    <a href="#applications-title">Applications</a>
+    <a href="#documentation-title">Docs</a>
+    <a href="#supply-title">Supply chain</a>
+    <a href="#suppliers">Suppliers</a>
+    <a href="#insights-title">Insights</a>
+    <a href="#faq-title">FAQs</a>
+  </nav>
 
   <section class="services" aria-labelledby="services-title">
     <div class="section-header">
@@ -72,29 +98,38 @@
       <div class="tech-row"><dt>Therapeutic class</dt><dd>GLP-1 receptor agonist</dd></div>
       <div class="tech-row"><dt>Dosage forms</dt><dd>Injection (solution), pen injector presentations</dd></div>
     </dl>
-    <div class="highlight-grid">
-      <div class="info-card">
-        <h3>Clinical status</h3>
-        <ul>
-          <li><strong>Description:</strong> <span data-field="description">Used to control blood sugar in diabetes, reduce weight, and lower cardiovascular risk in select adults.</span></li>
-          <li><strong>US approved:</strong> <span data-field="usApproved">YES</span></li>
-          <li><strong>Other approvals:</strong> <span data-field="otherApproved">YES</span></li>
-          <li><strong>Patents:</strong> <span data-field="patents">45</span></li>
-          <li><strong>Indicated conditions:</strong> <span data-field="indications">12</span></li>
-        </ul>
-      </div>
-      <div class="info-card">
-        <h3>Therapeutic categories</h3>
-        <p>Blood Glucose Lowering Agents, GLP-1 Agonists, Incretin Mimetics.</p>
-        <p><strong>Mechanism of action:</strong> Glucagon-like peptide 1 receptor agonist that enhances glucose-dependent insulin secretion.</p>
-      </div>
-      <div class="info-card">
-        <h3>Synonyms &amp; brands</h3>
-        <p>Also known as Ozempic®, Wegovy®, Rybelsus® (finished dosage forms) and Semaglutide base/acetate salt in API trade.</p>
-        <p class="info-note">Appears in key pharmacopeias when monographs are available (USP, EP, BP, JP); confirm the specific edition with suppliers.</p>
-      </div>
+    <div class="highlight-grid compact">
+      <article class="info-card small">
+        <div class="card-top">
+          <h3>Clinical status</h3>
+          <button class="chip" data-open-modal="tech-modal">Expand</button>
+        </div>
+        <div class="micro-grid">
+          <div class="micro-item"><span class="label">US approved</span><span class="value" data-field="usApproved">YES</span></div>
+          <div class="micro-item"><span class="label">Other approvals</span><span class="value" data-field="otherApproved">YES</span></div>
+          <div class="micro-item"><span class="label">Patents</span><span class="value" data-field="patents">45</span></div>
+          <div class="micro-item"><span class="label">Indications</span><span class="value" data-field="indications">12</span></div>
+        </div>
+        <p class="micro-copy" data-field="description">Used to control blood sugar in diabetes, reduce weight, and lower cardiovascular risk in select adults.</p>
+      </article>
+      <article class="info-card small">
+        <div class="card-top">
+          <h3>Therapeutic categories</h3>
+          <button class="chip ghost" data-open-modal="tech-modal">View MOA</button>
+        </div>
+        <p class="micro-copy">Blood Glucose Lowering Agents, GLP-1 Agonists, Incretin Mimetics.</p>
+        <p class="micro-copy"><strong>Mechanism:</strong> Glucagon-like peptide 1 receptor agonist that enhances glucose-dependent insulin secretion.</p>
+      </article>
+      <article class="info-card small">
+        <div class="card-top">
+          <h3>Pharmacopoeia &amp; forms</h3>
+          <button class="chip ghost" data-open-modal="tech-modal">Full list</button>
+        </div>
+        <p class="micro-copy">Appears in USP, EP, BP, and JP when monographs are available.</p>
+        <p class="micro-copy">Available as base and acetate salt; request micronized or specific purity grades.</p>
+      </article>
     </div>
-    <div class="cta-row">
+    <div class="cta-row tight">
       <a class="button primary" href="#tech-modal" data-open-modal="tech-modal">Open full technical profile</a>
       <a class="button ghost" href="#">Link to GLP-1 agonists overview</a>
     </div>
@@ -105,7 +140,7 @@
       <h2 id="applications-title">Industrial applications &amp; formulation uses</h2>
       <p class="section-lede">Help formulators and procurement teams understand how Semaglutide is used across markets and which grades to request.</p>
     </div>
-    <div class="two-column">
+    <div class="two-column cards">
       <div>
         <h3>Formulation uses</h3>
         <ul>
@@ -122,6 +157,10 @@
         <p>Specify target dosage form, salt/grade, pharmacopeial monograph (USP/EP/JP/BP) needs, and any cold-chain requirements to accelerate quotations.</p>
       </div>
     </div>
+    <div class="cta-row tight">
+      <a class="button tertiary" href="#supplier-modal" data-open-modal="supplier-modal">Preview suppliers matching these uses</a>
+      <a class="button ghost" href="#">Ask experts to match a grade</a>
+    </div>
   </section>
 
   <section class="documentation advisory" aria-labelledby="regulatory-depth-title">
@@ -129,24 +168,35 @@
       <h2 id="regulatory-depth-title">Regulatory, quality &amp; safety guidance</h2>
       <p class="section-lede">A checklist for due diligence so you can qualify Semaglutide suppliers confidently.</p>
     </div>
-    <div class="doc-columns">
-      <div>
-        <h3>Certifications &amp; documents</h3>
+    <div class="doc-columns compact">
+      <article class="doc-card">
+        <div class="card-top">
+          <h3>Certifications &amp; documents</h3>
+          <button class="chip ghost" data-open-modal="tech-modal">Docs list</button>
+        </div>
         <ul>
           <li>DMF (US DMF or EU ASMF) and CEP where available.</li>
           <li>GMP certificate and recent audit summaries (EU/US/WHO).</li>
           <li>CoA, CoC, MSDS, stability data, and impurity profile.</li>
           <li>FDA or EMA approval status references for finished products.</li>
         </ul>
-      </div>
-      <div>
-        <h3>Pharmacopoeial monographs</h3>
+      </article>
+      <article class="doc-card">
+        <div class="card-top">
+          <h3>Pharmacopoeial monographs</h3>
+          <button class="chip ghost" data-open-modal="tech-modal">Monograph details</button>
+        </div>
         <p>Confirm if the supplier can match USP, EP, BP, or JP monographs. Clearly request the edition and any specific test methods needed.</p>
+        <div class="inline-grid">
+          <div class="pill">USP/EP</div>
+          <div class="pill">BP/JP</div>
+          <div class="pill">Edition check</div>
+        </div>
         <h3>Safety &amp; handling</h3>
         <p>Semaglutide is peptide-based and sensitive to temperature; maintain cold chain and avoid prolonged room-temperature exposure. Review MSDS for handling guidance.</p>
         <h3>Regulatory status</h3>
         <p>Prescription-only API with global approvals (FDA 2017, EMA 2018). Some markets may require import permits; ask suppliers for local registrations.</p>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -170,17 +220,21 @@
       <h2 id="supply-title">Manufacturing &amp; supply chain insights</h2>
       <p class="section-lede">Understand where Semaglutide is produced and why reliable partners matter.</p>
     </div>
-    <div class="two-column">
-      <div>
-        <h3>Global production</h3>
+    <div class="two-column cards">
+      <details open>
+        <summary>Global production</summary>
         <p>Innovator production is centered in Denmark, while specialized peptide CDMOs in China and India are scaling generic supply. EU producers focus on stringent GMP compliance for exports.</p>
         <p>As a complex peptide, Semaglutide often relies on high-end purification and lyophilization capabilities; capacity can be tight, so plan lead times.</p>
-      </div>
-      <div>
-        <h3>Supply chain notes</h3>
+      </details>
+      <details>
+        <summary>Supply chain notes</summary>
         <p>Peptide synthesis depends on protected amino acid building blocks and cold-chain logistics. Communicate storage conditions and transport requirements to avoid potency loss.</p>
         <p>Monitor macro trends: increasing obesity demand, emerging generic entrants as patents expire, and regional regulatory updates that may affect export paperwork.</p>
-      </div>
+      </details>
+    </div>
+    <div class="cta-row tight">
+      <a class="button tertiary" href="#supplier-modal" data-open-modal="supplier-modal">See suppliers by origin</a>
+      <a class="button ghost" href="#">Request sourcing concierge</a>
     </div>
   </section>
 
@@ -267,23 +321,49 @@
       <h2 id="insights-title">Market insights for Semaglutide API</h2>
       <p class="section-lede">Understand demand signals and sourcing hotspots before you negotiate.</p>
     </div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <p class="stat-label">Top sourcing regions</p>
-        <p class="stat-value">EU &amp; East Asia</p>
+    <div class="insights-layout">
+      <div class="stats-grid compact">
+        <div class="stat-card">
+          <p class="stat-label">Top sourcing regions</p>
+          <p class="stat-value">EU &amp; East Asia</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Relative demand level</p>
+          <p class="stat-value">High and rising</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">Common buyer profile</p>
+          <p class="stat-value">Diabetes and obesity formulations</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <p class="stat-label">Relative demand level</p>
-        <p class="stat-value">High and rising</p>
+      <div class="insights-table">
+        <div class="table-row header">
+          <span>Region</span><span>Share</span><span>Trend</span>
+        </div>
+        <div class="table-row"><span>Europe</span><span>38%</span><span><div class="bar" style="--value:38%"></div></span></div>
+        <div class="table-row"><span>East Asia</span><span>32%</span><span><div class="bar" style="--value:32%"></div></span></div>
+        <div class="table-row"><span>North America</span><span>18%</span><span><div class="bar" style="--value:18%"></div></span></div>
+        <div class="table-row"><span>Other</span><span>12%</span><span><div class="bar" style="--value:12%"></div></span></div>
       </div>
-      <div class="stat-card">
-        <p class="stat-label">Common buyer profile</p>
-        <p class="stat-value">Diabetes and obesity formulations</p>
+      <div class="insight-chart">
+        <div class="chart-heading">
+          <span>Demand momentum</span>
+          <span class="chip ghost">Last 6 months</span>
+        </div>
+        <div class="spark-bars">
+          <div style="--height:68%" aria-label="Month 1"></div>
+          <div style="--height:72%" aria-label="Month 2"></div>
+          <div style="--height:78%" aria-label="Month 3"></div>
+          <div style="--height:85%" aria-label="Month 4"></div>
+          <div style="--height:88%" aria-label="Month 5"></div>
+          <div style="--height:93%" aria-label="Month 6"></div>
+        </div>
+        <p class="micro-copy">Trend influenced by obesity indications and expanding oral formulations.</p>
       </div>
     </div>
     <div class="cta-row">
-      <a class="button primary" href="#">View full market insights</a>
-      <a class="button ghost" href="#">Download sample report (register first)</a>
+      <a class="button primary" href="#market-modal" data-open-modal="market-modal">View full market insights</a>
+      <a class="button ghost" href="#market-modal" data-open-modal="market-modal">Download sample report (register first)</a>
     </div>
   </section>
 
@@ -292,7 +372,7 @@
       <h2 id="trends-title">Market demand &amp; pricing trends</h2>
       <p class="section-lede">High-level intelligence to frame your procurement strategy.</p>
     </div>
-    <div class="two-column">
+    <div class="two-column cards">
       <div>
         <h3>Demand trends</h3>
         <p>Global demand has surged with strong outcomes in diabetes and obesity care, driving intense interest from both originators and generic developers. Expect sustained inquiry volumes as payers broaden coverage.</p>
@@ -470,6 +550,24 @@
     </div>
   </div>
 
+  <div class="modal" id="market-modal" role="dialog" aria-modal="true" aria-label="Semaglutide market intelligence">
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal>&times;</button>
+      <h3>Market insights snapshot</h3>
+      <p>See how demand, pricing, and regional sourcing compare. A full report download is available after registration.</p>
+      <div class="modal-grid">
+        <div class="modal-row"><span>Top demand growth</span><span>+22% YoY (estimated)</span></div>
+        <div class="modal-row"><span>Pricing direction</span><span>Upward due to peptide complexity</span></div>
+        <div class="modal-row"><span>Key buyers</span><span>Diabetes &amp; obesity formulations</span></div>
+        <div class="modal-row"><span>Hot regions</span><span>EU, China, India</span></div>
+      </div>
+      <div class="cta-row tight">
+        <a class="button primary" href="#">Register to download sample report</a>
+        <a class="button ghost" href="#">Talk to market analyst</a>
+      </div>
+    </div>
+  </div>
+
   <div class="modal" id="supplier-modal" role="dialog" aria-modal="true" aria-label="Full Semaglutide supplier list">
     <div class="modal-content">
       <button class="modal-close" data-close-modal>&times;</button>
@@ -529,87 +627,119 @@
   </div>
 
   <script>
-    const openModalButtons = document.querySelectorAll('[data-open-modal]');
-    const closeModalButtons = document.querySelectorAll('[data-close-modal]');
+    document.addEventListener('DOMContentLoaded', () => {
+      const body = document.body;
 
-    openModalButtons.forEach((button) => {
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        const targetId = button.getAttribute('data-open-modal');
-        const modal = document.getElementById(targetId);
-        if (modal) {
-          modal.classList.add('open');
-          document.body.classList.add('modal-open');
+      const toggleModal = (modalId, shouldOpen) => {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+        modal.classList.toggle('open', shouldOpen);
+        body.classList.toggle('modal-open', shouldOpen);
+      };
+
+      document.addEventListener('click', (event) => {
+        const openTrigger = event.target.closest('[data-open-modal]');
+        if (openTrigger) {
+          event.preventDefault();
+          toggleModal(openTrigger.getAttribute('data-open-modal'), true);
+          return;
+        }
+
+        const closeTrigger = event.target.closest('[data-close-modal]');
+        if (closeTrigger) {
+          event.preventDefault();
+          const modal = closeTrigger.closest('.modal');
+          if (modal?.id) toggleModal(modal.id, false);
+          return;
         }
       });
-    });
 
-    closeModalButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
-        if (modal) {
-          modal.classList.remove('open');
-          document.body.classList.remove('modal-open');
+      document.querySelectorAll('.modal').forEach((modal) => {
+        modal.addEventListener('click', (event) => {
+          if (event.target === modal) {
+            toggleModal(modal.id, false);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          document.querySelectorAll('.modal.open').forEach((modal) => toggleModal(modal.id, false));
         }
       });
-    });
 
-    document.querySelectorAll('.modal').forEach((modal) => {
-      modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          modal.classList.remove('open');
-          document.body.classList.remove('modal-open');
-        }
-      });
-    });
+      const navLinks = Array.from(document.querySelectorAll('.sticky-nav a'));
+      const sections = navLinks
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
 
-    fetch('database.json')
-      .then((response) => response.json())
-      .then((data) => {
-        const api = data.semaglutide;
-        if (!api) return;
-
-        const setText = (selector, value) => {
-          if (!value) return;
-          document.querySelectorAll(selector).forEach((node) => {
-            node.textContent = value;
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const matchingLink = navLinks.find((link) => link.getAttribute('href') === `#${entry.target.id}`);
+            if (!matchingLink) return;
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => link.classList.remove('active'));
+              matchingLink.classList.add('active');
+            }
           });
-        };
+        },
+        { rootMargin: '-40% 0px -50% 0px', threshold: 0.25 }
+      );
 
-        setText('[data-field="description"]', api.description);
-        setText('[data-field="usApproved"]', api.usApproved);
-        setText('[data-field="otherApproved"]', api.otherApproved);
-        setText('[data-field="patents"]', api.patents);
-        setText('[data-field="indications"]', api.indications);
-        setText('[data-modal-field="description"]', api.description);
-        setText('[data-modal-field="usApproved"]', api.usApproved);
-        setText('[data-modal-field="otherApproved"]', api.otherApproved);
-        setText('[data-modal-field="patents"]', api.patents);
-        setText('[data-modal-field="indications"]', api.indications);
-        setText('[data-modal-field="therapeuticCategories"]', api.therapeuticCategories);
-        setText('[data-modal-field="mechanism"]', api.mechanism);
-        setText('[data-modal-field="synonyms"]', api.synonyms);
-        setText('[data-modal-field="pharmacopoeia"]', api.pharmacopoeia);
-        setText('[data-modal-field="grades"]', api.grades);
-      });
+      sections.forEach((section) => observer.observe(section));
 
-    const faqSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: Array.from(document.querySelectorAll('.faq-list details')).map((item) => ({
-        '@type': 'Question',
-        name: item.querySelector('summary')?.textContent || '',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.querySelector('p')?.textContent || ''
-        }
-      }))
-    };
+      fetch('database.json')
+        .then((response) => response.json())
+        .then((data) => {
+          const api = data.semaglutide;
+          if (!api) return;
 
-    const schemaTag = document.createElement('script');
-    schemaTag.type = 'application/ld+json';
-    schemaTag.textContent = JSON.stringify(faqSchema);
-    document.body.appendChild(schemaTag);
+          const setText = (selector, value) => {
+            if (!value) return;
+            document.querySelectorAll(selector).forEach((node) => {
+              node.textContent = value;
+            });
+          };
+
+          setText('[data-field="description"]', api.description);
+          setText('[data-field="usApproved"]', api.usApproved);
+          setText('[data-field="otherApproved"]', api.otherApproved);
+          setText('[data-field="patents"]', api.patents);
+          setText('[data-field="indications"]', api.indications);
+          setText('[data-modal-field="description"]', api.description);
+          setText('[data-modal-field="usApproved"]', api.usApproved);
+          setText('[data-modal-field="otherApproved"]', api.otherApproved);
+          setText('[data-modal-field="patents"]', api.patents);
+          setText('[data-modal-field="indications"]', api.indications);
+          setText('[data-modal-field="therapeuticCategories"]', api.therapeuticCategories);
+          setText('[data-modal-field="mechanism"]', api.mechanism);
+          setText('[data-modal-field="synonyms"]', api.synonyms);
+          setText('[data-modal-field="pharmacopoeia"]', api.pharmacopoeia);
+          setText('[data-modal-field="grades"]', api.grades);
+        })
+        .catch(() => {
+          /* Silently ignore load errors to avoid blocking page */
+        });
+
+      const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: Array.from(document.querySelectorAll('.faq-list details')).map((item) => ({
+          '@type': 'Question',
+          name: item.querySelector('summary')?.textContent || '',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.querySelector('p')?.textContent || ''
+          }
+        }))
+      };
+
+      const schemaTag = document.createElement('script');
+      schemaTag.type = 'application/ld+json';
+      schemaTag.textContent = JSON.stringify(faqSchema);
+      document.body.appendChild(schemaTag);
+    });
   </script>
 </body>
 </html>
