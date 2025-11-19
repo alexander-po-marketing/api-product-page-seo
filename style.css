@@ -5224,7 +5224,7 @@ body.api-page {
   font-family: "Mulish-Regular", sans-serif;
   color: #0c0c0c;
   background: #f7f9fb;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 
@@ -5367,7 +5367,7 @@ body.api-page {
   padding: 12px 18px;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   transition: all 0.2s ease;
   background: #ffffff;
@@ -5451,14 +5451,15 @@ body.api-page {
 .api-page .hero-summary h1 {
   color: #ffffff;
   margin-bottom: 10px;
-  font-size: 44px;
+  font-size: 40px;
   line-height: 1.15;
 }
 
 .api-page .hero-summary .lede {
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .api-page .hero-summary .eyebrow {
@@ -5651,12 +5652,13 @@ body.api-page {
 }
 
 .api-page .api-hero.condensed .hero-summary h1 {
-  font-size: 26px;
+  font-size: 24px;
   margin: 0;
 }
 
 .api-page .api-hero.condensed .hero-summary .lede {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
   display: -webkit-box;
@@ -5763,14 +5765,15 @@ body.api-page {
 }
 
 .api-page h1 {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 12px;
 }
 
 .api-page .lede {
-  font-size: 16px;
+  font-size: 15px;
   color: #1f2f3a;
   margin-bottom: 18px;
+  font-weight: 500;
 }
 
 .api-page .hero-actions {
@@ -5862,7 +5865,7 @@ body.api-page {
 }
 
 .api-page h2 {
-  font-size: 26px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
