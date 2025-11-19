@@ -74,6 +74,9 @@
 
   <main class="page-shell">
     <nav class="sticky-nav" aria-label="Page navigation">
+      <span class="nav-arrow" aria-hidden="true">
+        <img src="assets/tabler-arrow-up0.svg" alt="" loading="lazy">
+      </span>
       <a href="#about">Overview</a>
       <a href="#applications">Applications</a>
       <a href="#quality">Quality</a>
@@ -83,6 +86,9 @@
       <a href="#suppliers">Suppliers</a>
       <a href="#how-to-source">How to source</a>
       <a href="#faq">FAQs</a>
+      <span class="nav-arrow" aria-hidden="true">
+        <img src="assets/tabler-arrow-up6.svg" alt="" loading="lazy">
+      </span>
     </nav>
 
     <section id="about" class="section-block about">
@@ -238,6 +244,15 @@
           <li>We verify quality, documents, and certifications before introductions.</li>
           <li>We save your team weeks of sourcing time and share progress updates.</li>
         </ul>
+        <div class="smart-infographic" aria-label="Smart Sourcing workflow graphic">
+          <img src="assets/rectangle-15.png" alt="Illustrated workflow showing request intake, audits, and supplier outreach" loading="lazy">
+          <div class="smart-infographic-copy">
+            <h3>Smart sourcing workflow</h3>
+            <p><strong>Step 1:</strong> Intake specs &amp; preferred countries.</p>
+            <p><strong>Step 2:</strong> Audit documents &amp; shortlist GMP partners.</p>
+            <p><strong>Step 3:</strong> Arrange outreach, NDAs, and status reports.</p>
+          </div>
+        </div>
         <div class="smart-cta">
           <p>Tell us your target grade, documents, and preferred countries—our team will shortlist GMP-compliant partners and set up NDAs.</p>
           <a class="button primary" href="#">Request Smart Sourcing Assistance</a>
@@ -283,10 +298,19 @@
           <a href="semaglutide.html?cert=cep">CEP holders</a>
           <a href="semaglutide.html?doc=dmf">US DMF holders</a>
         </div>
+        <div class="supplier-logo-grid" aria-label="Sample Semaglutide supplier logos">
+          <img src="assets/abbvie-1-jpg0.png" alt="AbbVie logo" loading="lazy">
+          <img src="assets/pfizer-1-jpg0.png" alt="Pfizer logo" loading="lazy">
+          <img src="assets/sanofi-1-jpg0.png" alt="Sanofi logo" loading="lazy">
+          <img src="assets/astra-zeneca-2-jpg0.png" alt="AstraZeneca logo" loading="lazy">
+          <img src="assets/procaps-jpg0.png" alt="Procaps logo" loading="lazy">
+          <img src="assets/solvias-jpg0.png" alt="Solvias logo" loading="lazy">
+        </div>
+        <p class="supplier-logo-note">These logos represent pharma manufacturers whose Semaglutide documentation our team frequently benchmarks when advising buyers.</p>
       </div>
       <div class="filters">
-        <label>
-          Country / region
+        <label class="filter-group">
+          <span class="filter-title"><img src="assets/mdi-filter0.svg" alt="" aria-hidden="true" loading="lazy">Country / region</span>
           <select onchange="if (this.value) window.location = this.value;">
             <option value="">All regions</option>
             <option value="semaglutide.html?country=denmark">Denmark</option>
@@ -298,8 +322,8 @@
             <option value="semaglutide.html?country=canada">Canada</option>
           </select>
         </label>
-        <label>
-          Certification
+        <label class="filter-group">
+          <span class="filter-title"><img src="assets/mdi-filter0.svg" alt="" aria-hidden="true" loading="lazy">Certification</span>
           <select onchange="if (this.value) window.location = this.value;">
             <option value="">Any certification</option>
             <option value="semaglutide.html?cert=gmp">GMP</option>
@@ -309,8 +333,8 @@
             <option value="semaglutide.html?cert=who">WHO GMP</option>
           </select>
         </label>
-        <label>
-          Documentation
+        <label class="filter-group">
+          <span class="filter-title"><img src="assets/mdi-filter0.svg" alt="" aria-hidden="true" loading="lazy">Documentation</span>
           <select onchange="if (this.value) window.location = this.value;">
             <option value="">Any</option>
             <option value="semaglutide.html?doc=dmf">DMF</option>
