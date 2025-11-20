@@ -5944,7 +5944,7 @@ body.api-page {
 
 .api-page .intro-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(0, 0.8fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
 }
 
@@ -6041,11 +6041,28 @@ body.api-page {
   border-radius: 18px;
   padding: 20px;
   box-shadow: 0 20px 50px rgba(12, 12, 12, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .api-page .at-a-glance ul {
   padding-left: 18px;
   margin: 12px 0;
+}
+
+.api-page .page-sidebar .at-a-glance {
+  box-shadow: 0 24px 60px rgba(15, 35, 53, 0.08);
+  border-radius: 16px;
+}
+
+.api-page .page-sidebar .at-a-glance h3 {
+  margin: 0;
+}
+
+.api-page .page-sidebar .at-a-glance p {
+  margin: 0;
+  color: #1f2f3a;
 }
 
 .api-page .smart-sourcing-grid {
