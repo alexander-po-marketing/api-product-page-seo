@@ -5880,11 +5880,16 @@ body.api-page {
   gap: 32px;
 }
 
+.api-page .spec-stack {
+  display: grid;
+  gap: 10px;
+}
+
 .api-page .spec-table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 10px;
-  margin: 14px 0;
+  margin: 14px 0 4px;
 }
 
 .api-page .spec-table div {
@@ -5908,6 +5913,13 @@ body.api-page {
   font-size: 15px;
   font-weight: 800;
   color: #0c0c0c;
+}
+
+.api-page .spec-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .api-page details.collapsible {
