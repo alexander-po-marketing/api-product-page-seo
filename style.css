@@ -5369,6 +5369,15 @@ body.api-page {
     order: 1;
   }
 
+  .api-page .supplier-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .api-page .supplier-sidebar {
+    position: static;
+    order: 2;
+  }
+
   .api-page .sidebar-actions {
     flex-direction: row;
     flex-wrap: wrap;
@@ -6336,6 +6345,37 @@ body.api-page {
   border: 1px solid #d7e4ee;
   font-size: 13px;
   font-weight: 600;
+}
+
+.api-page .supplier-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 2.5fr);
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.api-page .supplier-sidebar {
+  position: sticky;
+  top: calc(var(--condensed-hero-height) + var(--sticky-nav-height) + (var(--sticky-stack-gap) * 1.5));
+  display: grid;
+  gap: 16px;
+  align-self: flex-start;
+}
+
+.api-page .supplier-sidebar .sidebar-card {
+  margin: 0;
+}
+
+.api-page .supplier-sidebar .filters {
+  grid-template-columns: 1fr;
+}
+
+.api-page .supplier-sidebar .sidebar-note {
+  margin: 0;
+}
+
+.api-page .supplier-sidebar .sidebar-actions {
+  margin-top: 12px;
 }
 
 .api-page .supplier-card .trust {
