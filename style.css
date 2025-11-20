@@ -5570,18 +5570,6 @@ body.api-page {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.api-page .hero-links {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  flex-wrap: wrap;
-  color: rgba(241, 245, 255, 0.7);
-}
-
-.api-page .hero-links .inline-link {
-  color: #a8e0ff;
-}
-
 .api-page .hero-visual {
   background: rgba(5, 20, 48, 0.65);
   border-radius: 20px;
