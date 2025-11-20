@@ -5271,7 +5271,7 @@ body.api-page {
   gap: 24px;
 }
 
-.api-page .sidebar-card {
+.api-page .sidebar-card { 
   background: #ffffff;
   border: 1px solid #e6edf3;
   border-radius: 16px;
@@ -5281,6 +5281,34 @@ body.api-page {
 
 .api-page .sidebar-card--muted {
   background: #f7f9fb;
+}
+
+.api-page .sidebar-card--steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.api-page .sidebar-steps-header h4 {
+  margin: 4px 0;
+}
+
+.api-page .sidebar-note {
+  color: #4f6372;
+  font-size: 14px;
+  margin: 0;
+}
+
+.api-page .sidebar-steps-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+  color: #1f2f3a;
+}
+
+.api-page .sidebar-steps-list strong {
+  color: #0f2335;
 }
 
 .api-page .sidebar-eyebrow {
