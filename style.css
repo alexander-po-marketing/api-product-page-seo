@@ -5225,6 +5225,9 @@ body.api-page {
   color: #0c0c0c;
   background: #f7f9fb;
   line-height: 1.5;
+  --condensed-hero-height: 96px;
+  --sticky-nav-height: 60px;
+  --sticky-stack-gap: 12px;
 }
 
 
@@ -5238,7 +5241,7 @@ body.api-page {
 .api-page .page-shell {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px 64px;
+  padding: calc(var(--sticky-nav-height) + var(--sticky-stack-gap)) 20px 64px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -5261,7 +5264,8 @@ body.api-page {
 
 .api-page .page-sidebar {
   position: sticky;
-  top: 24px;
+  top: calc(var(--condensed-hero-height) + var(--sticky-nav-height) + (var(--sticky-stack-gap) * 1.5));
+  margin-top: var(--sticky-stack-gap);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -5635,10 +5639,10 @@ body.api-page {
   position: sticky;
   top: 0;
   padding: 0;
-  min-height: auto;
+  min-height: var(--condensed-hero-height);
   box-shadow: 0 20px 60px rgba(1, 6, 18, 0.65);
   backdrop-filter: blur(8px);
-  z-index: 90;
+  z-index: 120;
 }
 
 .api-page .api-hero.condensed .hero-inner {
@@ -5724,8 +5728,8 @@ body.api-page {
 
 .api-page .sticky-nav {
   position: sticky;
-  top: 0;
-  z-index: 90;
+  top: var(--condensed-hero-height);
+  z-index: 110;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(230, 237, 243, 0.8);
   padding: 12px 20px;
@@ -6711,8 +6715,14 @@ body.modal-open {
 }
 
 @media (max-width: 768px) {
+  body.api-page {
+    --condensed-hero-height: 88px;
+    --sticky-nav-height: 64px;
+    --sticky-stack-gap: 10px;
+  }
+
   .api-page .page-shell {
-    padding: 0 14px 48px;
+    padding: calc(var(--sticky-nav-height) + var(--sticky-stack-gap)) 14px 48px;
     gap: 20px;
   }
 
