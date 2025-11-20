@@ -5256,6 +5256,13 @@ body.api-page {
 }
 
 
+.api-page .page-content--post-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
 .api-page .page-content {
   display: flex;
   flex-direction: column;
@@ -5367,6 +5374,10 @@ body.api-page {
 
   .api-page .sidebar-actions .button {
     flex: 1 1 calc(50% - 8px);
+  }
+
+  .api-page .smart-sourcing-promo {
+    padding: 28px 20px;
   }
 }
 
@@ -6017,6 +6028,21 @@ body.api-page {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   align-items: start;
+}
+
+.api-page .smart-sourcing-promo {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 32px calc(50vw - 50%);
+}
+
+.api-page .smart-sourcing-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .api-page .smart-infographic {
