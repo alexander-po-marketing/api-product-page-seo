@@ -5606,6 +5606,25 @@ body.api-page {
   gap: 12px;
 }
 
+.api-page .hero-visual-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.api-page .hero-visual-actions .button {
+  width: 100%;
+  justify-content: center;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f1f5ff;
+}
+
+.api-page .hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+}
+
 .api-page .snapshot-item {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -5626,6 +5645,12 @@ body.api-page {
 .api-page .snapshot-item .value {
   font-weight: 700;
   color: #ffffff;
+}
+
+.api-page .snapshot-item .helper {
+  font-size: 12px;
+  color: rgba(241, 245, 255, 0.72);
+  font-weight: 600;
 }
 
 .api-page .hero-approvals {
