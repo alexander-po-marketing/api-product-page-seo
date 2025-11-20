@@ -19,42 +19,44 @@
   <header class="api-hero" id="top" aria-expanded="true">
     <div class="hero-inner">
       <div class="hero-summary" role="region" aria-label="Semaglutide hero summary">
-        <div class="summary-text">
-          <p class="eyebrow">GLP-1 receptor agonist API</p>
-          <h1>Semaglutide API Suppliers and Manufacturers</h1>
-          <p class="lede">Semaglutide – GLP-1 analog for type 2 diabetes and chronic weight management therapies.</p>
-        </div>
-        <div class="hero-actions" aria-label="Primary Semaglutide actions">
-          <a class="button primary" href="#suppliers">Browse suppliers</a>
-          <a class="button ghost" href="#smart-sourcing">Request Smart Sourcing</a>
-        </div>
-      </div>
-      <div class="hero-main">
-        <div class="hero-text">
-          <p class="aka">Also known as: NN9535 · Ozempic · Rybelsus · 910463-68-2 · NNC 0113-0217</p>
-          <div class="hero-links">
-            <a href="#indication-modal" class="inline-link" data-open-modal="indication-modal">Indication (full text)</a>
-            <span aria-hidden="true">•</span>
-            <a href="#moa-modal" class="inline-link" data-open-modal="moa-modal">Mechanism of Action</a>
+        <div class="hero-main summary-grid">
+          <div class="summary-left">
+            <div class="summary-text">
+              <p class="eyebrow">GLP-1 receptor agonist API</p>
+              <h1>Semaglutide API Suppliers and Manufacturers</h1>
+              <p class="lede">Semaglutide – GLP-1 analog for type 2 diabetes and chronic weight management therapies.</p>
+            </div>
+            <div class="hero-text">
+              <p class="aka">Also known as: NN9535 · Ozempic · Rybelsus · 910463-68-2 · NNC 0113-0217</p>
+              <div class="hero-links">
+                <a href="#indication-modal" class="inline-link" data-open-modal="indication-modal">Indication (full text)</a>
+                <span aria-hidden="true">•</span>
+                <a href="#moa-modal" class="inline-link" data-open-modal="moa-modal">Mechanism of Action</a>
+              </div>
+            </div>
+            <div class="hero-actions" aria-label="Primary Semaglutide actions">
+              <a class="button primary" href="#smart-sourcing">Smart sourcing</a>
+              <a class="button ghost" href="#suppliers">Browse suppliers</a>
+            </div>
           </div>
-        </div>
-        <div class="hero-visual">
-          <figure>
-            <img src="assets/clip-path-group0.svg" alt="Structure of Semaglutide">
-            <figcaption>Structure of Semaglutide</figcaption>
-          </figure>
-          <div class="hero-snapshot">
-            <div class="snapshot-item"><span class="label">CAS No.</span><span class="value" data-json-field="cas-number">910463-68-2</span></div>
-            <div class="snapshot-item"><span class="label">DrugBank</span><span class="value">DB13928</span></div>
-            <div class="snapshot-item"><span class="label">Molecular formula</span><span class="value">C<sub>187</sub>H<sub>291</sub>N<sub>45</sub>O<sub>59</sub></span></div>
-            <div class="snapshot-item"><span class="label">Molecular weight</span><span class="value" data-json-field="average-mass">4113.64 g/mol</span></div>
-            <div class="snapshot-item"><span class="label">Modality</span><span class="value">Peptide (GLP-1 analog)</span></div>
-            <div class="snapshot-item"><span class="label">Therapeutic categories</span><span class="value" data-json-list="categories">Blood Glucose Lowering Agents · GLP-1 Agonists · Incretin Mimetics</span></div>
-          </div>
-          <p class="hero-approvals">US Approved <strong>YES</strong> · Other regions <strong>YES</strong> · <span class="hero-note">Use the certification filters below to focus on FDA, EMA, or WHO GMP producers.</span></p>
-          <div class="hero-visual-note">
-            <p>Need GLP-1 alternatives? Explore <a href="index.html#glp-1" class="inline-link">other GLP-1 agonist APIs</a>.</p>
-            <p>Approved in: EU, US, Canada, Japan.</p>
+          <div class="hero-visual">
+            <figure>
+              <img src="assets/clip-path-group0.svg" alt="Structure of Semaglutide">
+              <figcaption>Structure of Semaglutide</figcaption>
+            </figure>
+            <div class="hero-snapshot">
+              <div class="snapshot-item"><span class="label">CAS No.</span><span class="value" data-json-field="cas-number">910463-68-2</span></div>
+              <div class="snapshot-item"><span class="label">DrugBank</span><span class="value">DB13928</span></div>
+              <div class="snapshot-item"><span class="label">Molecular formula</span><span class="value">C<sub>187</sub>H<sub>291</sub>N<sub>45</sub>O<sub>59</sub></span></div>
+              <div class="snapshot-item"><span class="label">Molecular weight</span><span class="value" data-json-field="average-mass">4113.64 g/mol</span></div>
+              <div class="snapshot-item"><span class="label">Modality</span><span class="value">Peptide (GLP-1 analog)</span></div>
+              <div class="snapshot-item"><span class="label">Therapeutic categories</span><span class="value" data-json-list="categories">Blood Glucose Lowering Agents · GLP-1 Agonists · Incretin Mimetics</span></div>
+            </div>
+            <p class="hero-approvals">US Approved <strong>YES</strong> · Other regions <strong>YES</strong> · <span class="hero-note">Use the certification filters below to focus on FDA, EMA, or WHO GMP producers.</span></p>
+            <div class="hero-visual-note">
+              <p>Need GLP-1 alternatives? Explore <a href="index.html#glp-1" class="inline-link">other GLP-1 agonist APIs</a>.</p>
+              <p>Approved in: EU, US, Canada, Japan.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -779,7 +781,7 @@
           hero.classList.toggle('condensed', shouldCondense);
           hero.setAttribute('aria-expanded', shouldCondense ? 'false' : 'true');
           if (heroMain) {
-            heroMain.setAttribute('aria-hidden', shouldCondense ? 'true' : 'false');
+            heroMain.setAttribute('aria-hidden', 'false');
           }
         };
 
