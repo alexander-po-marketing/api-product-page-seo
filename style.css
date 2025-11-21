@@ -5224,7 +5224,7 @@ body.api-page {
   font-family: "Mulish-Regular", sans-serif;
   color: #0c0c0c;
   background: #f7f9fb;
-  line-height: 1.5;
+  line-height: 1.2;
   --condensed-hero-height: 96px;
   --sticky-nav-height: 60px;
   --sticky-stack-gap: 12px;
@@ -5589,7 +5589,7 @@ body.api-page {
 .api-page .hero-summary .lede {
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -5666,6 +5666,7 @@ body.api-page {
 .api-page .aka {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
 }
 
 .api-page .hero-visual {
@@ -5699,16 +5700,14 @@ body.api-page {
 }
 
 .api-page .structure-card {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 16px;
-  padding: 12px;
   border: 1px solid rgba(230, 237, 243, 0.9);
   box-shadow: 0 24px 40px rgba(0, 8, 20, 0.25);
 }
 
 .api-page .structure-card figure {
   margin: 0;
-  background: linear-gradient(180deg, #f9fbfd 0%, #eef3f8 100%);
   border-radius: 12px;
   padding: 14px;
   display: flex;
@@ -5719,7 +5718,7 @@ body.api-page {
 }
 
 .api-page .structure-card img {
-  max-width: 240px;
+  max-width: 180px;
   height: auto;
   filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.12));
 }
@@ -5888,7 +5887,7 @@ body.api-page {
 }
 
 .api-page .approval-chip .label {
-  font-size: 12px;
+  font-size: 9px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: rgba(241, 245, 255, 0.7);
@@ -5897,6 +5896,7 @@ body.api-page {
 
 .api-page .approval-chip .value {
   margin: 0;
+  font-size: 12px;
 }
 
 .api-page .approval-note {
@@ -6026,7 +6026,7 @@ body.api-page {
 
 @media (max-width: 640px) {
   .api-page .hero-summary h1 {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
