@@ -5561,7 +5561,7 @@ body.api-page {
 
 .api-page .hero-summary .summary-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 20px;
   align-items: start;
 }
