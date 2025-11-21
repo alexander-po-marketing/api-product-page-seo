@@ -5561,9 +5561,9 @@ body.api-page {
 
 .api-page .hero-summary .summary-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  align-items: stretch;
 }
 
 .api-page .hero-summary .summary-left {
@@ -5651,9 +5651,9 @@ body.api-page {
 
 .api-page .hero-main {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  align-items: stretch;
 }
 
 .api-page .hero-text {
