@@ -5537,6 +5537,7 @@ body.api-page {
   gap: 20px;
   position: relative;
   z-index: 1;
+  min-height: 70vh;
 }
 
 .api-page .hero-artwork {
@@ -5560,8 +5561,8 @@ body.api-page {
 
 .api-page .hero-summary .summary-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   align-items: start;
 }
 
@@ -5573,10 +5574,9 @@ body.api-page {
 }
 
 .api-page .summary-top {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-  align-items: start;
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .api-page .hero-summary h1 {
@@ -5602,17 +5602,22 @@ body.api-page {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .api-page .summary-actions {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 12px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 12px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  width: 100%;
 }
 
 .api-page .summary-actions .hero-metrics {
@@ -5646,8 +5651,8 @@ body.api-page {
 
 .api-page .hero-main {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   align-items: start;
 }
 
@@ -5691,6 +5696,39 @@ body.api-page {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.65);
   margin-top: 8px;
+}
+
+.api-page .structure-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid rgba(230, 237, 243, 0.9);
+  box-shadow: 0 24px 40px rgba(0, 8, 20, 0.25);
+}
+
+.api-page .structure-card figure {
+  margin: 0;
+  background: linear-gradient(180deg, #f9fbfd 0%, #eef3f8 100%);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #0c0c0c;
+}
+
+.api-page .structure-card img {
+  max-width: 240px;
+  height: auto;
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.12));
+}
+
+.api-page .structure-card figcaption {
+  color: #27364b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .api-page .hero-snapshot {
@@ -5939,9 +5977,10 @@ body.api-page {
 }
 
 .api-page .api-hero.condensed .summary-top {
-  grid-template-columns: minmax(0, 1fr) auto;
+  flex-direction: row;
   gap: 12px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .api-page .api-hero.condensed .hero-text {
@@ -5976,7 +6015,8 @@ body.api-page {
   }
 
   .api-page .summary-top {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .api-page .summary-actions {
@@ -6073,6 +6113,14 @@ body.api-page {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.api-page .hero-footer {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .api-page .hero-quick {
