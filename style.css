@@ -5333,11 +5333,14 @@ body.api-page {
   flex-direction: column;
   gap: 12px;
   margin-top: 16px;
+  align-items: stretch;
 }
 
 .api-page .sidebar-actions .button {
   width: 100%;
+  max-width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .api-page .sidebar-list {
@@ -5378,12 +5381,11 @@ body.api-page {
   }
 
   .api-page .sidebar-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .api-page .sidebar-actions .button {
-    flex: 1 1 calc(50% - 8px);
+    flex: 1 1 100%;
   }
 
   .api-page .smart-sourcing-promo {
@@ -5392,10 +5394,6 @@ body.api-page {
 }
 
 @media (max-width: 640px) {
-  .api-page .sidebar-actions {
-    flex-direction: column;
-  }
-
   .api-page .sidebar-actions .button {
     flex: 1 1 auto;
   }
