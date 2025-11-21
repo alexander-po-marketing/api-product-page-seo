@@ -6761,9 +6761,41 @@ body.api-page {
 
 .api-page .faq-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 18px;
   margin-top: 18px;
+}
+
+.api-page .faq-groups--extra {
+  margin-top: 0;
+}
+
+.api-page .faq-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+}
+
+.api-page .faq-collapsible.is-open {
+  max-height: 4000px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.api-page .faq-toggle-row {
+  margin-top: 14px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .api-page .faq-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .api-page .faq-toggle-row {
+    text-align: left;
+  }
 }
 
 .api-page .faq-group {

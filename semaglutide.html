@@ -697,29 +697,36 @@
             <details><summary>Can I request audits?</summary><p>Pharmaoffer partners with audit firms to provide GMP reports or on-site assessments. Use the Smart Sourcing CTA to request an audit.</p></details>
           </div>
         </div>
-        <div class="faq-group">
-          <h3 class="faq-group-title">Supplier landscape &amp; pricing</h3>
-          <p class="faq-group-lede">Regional availability, pricing signals, and how to navigate on-platform filters.</p>
-          <div class="faq-items">
-            <details><summary>Are there Semaglutide suppliers in Europe?</summary><p>Yes—Denmark, Germany, and Spain host EU GMP peptide CDMOs. Use the country filter (e.g., ?country=denmark) to see them.</p></details>
-            <details><summary>Can I buy Semaglutide API in China or India?</summary><p>Several GMP peptide manufacturers operate in China and India. Apply the relevant country filter and review CEP or DMF status.</p></details>
-            <details><summary>What price should I expect?</summary><p>Prices depend on documentation, lot size, and delivery terms. Use our Market Report for historical pricing and benchmarking.</p></details>
-            <details><summary>Can Pharmaoffer help if no suppliers respond?</summary><p>Yes—submit a Smart Sourcing request and our team will contact off-platform partners or run a custom search.</p></details>
-            <details><summary>How fast do suppliers respond?</summary><p>Verified suppliers usually respond within 24–72 hours. Providing clear specs (quantity, documents, deadline) speeds things up.</p></details>
-            <details><summary>Why are there so many filters?</summary><p>Country, certification, and documentation filters let buyers create crawlable landing pages and quickly find compliant manufacturers. Each filter also supports long-tail SEO queries.</p></details>
+      </div>
+      <div class="faq-collapsible" id="faq-more" data-faq-collapsible>
+        <div class="faq-groups faq-groups--extra">
+          <div class="faq-group">
+            <h3 class="faq-group-title">Supplier landscape &amp; pricing</h3>
+            <p class="faq-group-lede">Regional availability, pricing signals, and how to navigate on-platform filters.</p>
+            <div class="faq-items">
+              <details><summary>Are there Semaglutide suppliers in Europe?</summary><p>Yes—Denmark, Germany, and Spain host EU GMP peptide CDMOs. Use the country filter (e.g., ?country=denmark) to see them.</p></details>
+              <details><summary>Can I buy Semaglutide API in China or India?</summary><p>Several GMP peptide manufacturers operate in China and India. Apply the relevant country filter and review CEP or DMF status.</p></details>
+              <details><summary>What price should I expect?</summary><p>Prices depend on documentation, lot size, and delivery terms. Use our Market Report for historical pricing and benchmarking.</p></details>
+              <details><summary>Can Pharmaoffer help if no suppliers respond?</summary><p>Yes—submit a Smart Sourcing request and our team will contact off-platform partners or run a custom search.</p></details>
+              <details><summary>How fast do suppliers respond?</summary><p>Verified suppliers usually respond within 24–72 hours. Providing clear specs (quantity, documents, deadline) speeds things up.</p></details>
+              <details><summary>Why are there so many filters?</summary><p>Country, certification, and documentation filters let buyers create crawlable landing pages and quickly find compliant manufacturers. Each filter also supports long-tail SEO queries.</p></details>
+            </div>
+          </div>
+          <div class="faq-group">
+            <h3 class="faq-group-title">Logistics &amp; procurement</h3>
+            <p class="faq-group-lede">Operational details for negotiating orders, samples, and cold-chain logistics.</p>
+            <div class="faq-items">
+              <details><summary>What is the MOQ for Semaglutide?</summary><p>Minimum order quantities typically range from 5 g to 50 g depending on salt form and packaging. Some suppliers offer development lots upon NDA.</p></details>
+              <details><summary>Do suppliers provide samples?</summary><p>Many will supply small evaluation quantities once NDAs and quality questionnaires are complete. Use the inquiry button to request a sample.</p></details>
+              <details><summary>Is cold-chain shipping required?</summary><p>Yes, Semaglutide is temperature sensitive and should remain at 2–8&nbsp;°C. Confirm GDP-compliant carriers and packaging details.</p></details>
+              <details><summary>How do I import Semaglutide?</summary><p>Check local regulations for peptide APIs, secure import permits, and ensure invoices reference the correct DMF/CEP numbers. Suppliers can guide you through the paperwork.</p></details>
+              <details><summary>What storage conditions should I follow?</summary><p>Store at 2–8&nbsp;°C, protect from light, and avoid repeated freeze-thaw cycles. Ask suppliers for detailed stability data.</p></details>
+            </div>
           </div>
         </div>
-        <div class="faq-group">
-          <h3 class="faq-group-title">Logistics &amp; procurement</h3>
-          <p class="faq-group-lede">Operational details for negotiating orders, samples, and cold-chain logistics.</p>
-          <div class="faq-items">
-            <details><summary>What is the MOQ for Semaglutide?</summary><p>Minimum order quantities typically range from 5 g to 50 g depending on salt form and packaging. Some suppliers offer development lots upon NDA.</p></details>
-            <details><summary>Do suppliers provide samples?</summary><p>Many will supply small evaluation quantities once NDAs and quality questionnaires are complete. Use the inquiry button to request a sample.</p></details>
-            <details><summary>Is cold-chain shipping required?</summary><p>Yes, Semaglutide is temperature sensitive and should remain at 2–8&nbsp;°C. Confirm GDP-compliant carriers and packaging details.</p></details>
-            <details><summary>How do I import Semaglutide?</summary><p>Check local regulations for peptide APIs, secure import permits, and ensure invoices reference the correct DMF/CEP numbers. Suppliers can guide you through the paperwork.</p></details>
-            <details><summary>What storage conditions should I follow?</summary><p>Store at 2–8&nbsp;°C, protect from light, and avoid repeated freeze-thaw cycles. Ask suppliers for detailed stability data.</p></details>
-          </div>
-        </div>
+      </div>
+      <div class="faq-toggle-row">
+        <button class="button ghost faq-toggle" type="button" aria-expanded="false" aria-controls="faq-more" data-faq-toggle>View more FAQs</button>
       </div>
       </section>
       </div>
@@ -884,6 +891,31 @@
 
         updateHeroState();
         window.addEventListener('scroll', onScroll, { passive: true });
+      }
+
+      const faqToggle = document.querySelector('[data-faq-toggle]');
+      const faqCollapsible = document.querySelector('[data-faq-collapsible]');
+
+      if (faqToggle && faqCollapsible) {
+        const setFaqState = (expanded) => {
+          faqToggle.setAttribute('aria-expanded', String(expanded));
+          faqToggle.textContent = expanded ? 'Hide additional FAQs' : 'View more FAQs';
+          faqCollapsible.classList.toggle('is-open', expanded);
+          faqCollapsible.style.maxHeight = expanded ? `${faqCollapsible.scrollHeight}px` : '';
+        };
+
+        setFaqState(false);
+
+        faqToggle.addEventListener('click', () => {
+          const isExpanded = faqToggle.getAttribute('aria-expanded') === 'true';
+          setFaqState(!isExpanded);
+        });
+
+        window.addEventListener('resize', () => {
+          if (faqToggle.getAttribute('aria-expanded') === 'true') {
+            faqCollapsible.style.maxHeight = `${faqCollapsible.scrollHeight}px`;
+          }
+        });
       }
 
       const setContent = (selector, value, { html = false } = {}) => {
