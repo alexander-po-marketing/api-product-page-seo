@@ -5276,7 +5276,7 @@ body.api-page {
   margin-top: var(--sticky-stack-gap);
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
 }
 
 .api-page .sidebar-card { 
@@ -5331,8 +5331,8 @@ body.api-page {
 .api-page .sidebar-actions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 16px;
+  gap: 10px;
+  margin-top: 12px;
   align-items: stretch;
 }
 
@@ -5341,6 +5341,69 @@ body.api-page {
   max-width: 100%;
   text-align: center;
   box-sizing: border-box;
+}
+
+.api-page .sidebar-cta-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin: 8px 0 14px;
+}
+
+.api-page .sidebar-cta-bar .cta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e6edf3;
+  text-decoration: none;
+  background: #ffffff;
+  color: #0f2335;
+  font-weight: 800;
+  line-height: 1.2;
+  box-shadow: 0 8px 20px rgba(15, 35, 53, 0.06);
+}
+
+.api-page .sidebar-cta-bar .cta-chip.primary {
+  background: linear-gradient(135deg, #3cb1c3, #36677f);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.api-page .sidebar-cta-bar .cta-chip .cta-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(54, 103, 127, 0.08);
+  color: #1f2f3a;
+  font-size: 18px;
+}
+
+.api-page .sidebar-cta-bar .cta-chip.primary .cta-icon {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.api-page .sidebar-cta-bar .cta-text {
+  display: grid;
+  gap: 2px;
+}
+
+.api-page .sidebar-cta-bar .cta-label {
+  font-size: 14px;
+}
+
+.api-page .sidebar-cta-bar .cta-sub {
+  font-size: 12px;
+  color: #4f6372;
+  font-weight: 600;
+}
+
+.api-page .sidebar-cta-bar .cta-chip.primary .cta-sub {
+  color: rgba(241, 245, 255, 0.86);
 }
 
 .api-page .sidebar-list {
@@ -5369,6 +5432,11 @@ body.api-page {
 
   .api-page .page-content {
     order: 1;
+  }
+
+  .api-page .sidebar-cta-bar {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .api-page .supplier-layout {
