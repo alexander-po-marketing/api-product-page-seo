@@ -6844,6 +6844,101 @@ body.api-page {
   color: #1f2f3a;
 }
 
+.api-page .accordion-grid {
+  display: grid;
+  gap: var(--space-compact-3);
+}
+
+.api-page .accordion-grid.compact {
+  gap: var(--space-compact-2);
+}
+
+.api-page .accordion-card {
+  padding: 0;
+  border: 1px solid #dfe8f0;
+  border-radius: var(--card-radius-compact);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(12, 12, 12, 0.04);
+  overflow: hidden;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.api-page .accordion-card summary {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: var(--space-compact-3) 14px;
+  font-weight: 800;
+  font-size: var(--text-compact-title);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.api-page .accordion-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.api-page .accordion-card summary:focus-visible {
+  outline: 2px solid #3cb1c3;
+  outline-offset: 4px;
+}
+
+.api-page .summary-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-right: auto;
+}
+
+.api-page .summary-title {
+  font-size: var(--text-compact-title);
+}
+
+.api-page .summary-hint {
+  margin: 0;
+  color: #4a5c6b;
+  font-size: var(--text-compact-body);
+}
+
+.api-page .chevron {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #2b404f;
+  border-bottom: 2px solid #2b404f;
+  transform: rotate(45deg);
+  transition: transform 180ms ease;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.api-page .accordion-card[open] .chevron {
+  transform: rotate(-135deg);
+}
+
+.api-page .accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 14px;
+  opacity: 0;
+  transition: max-height 220ms ease, padding 180ms ease, opacity 200ms ease;
+}
+
+.api-page .accordion-card[open] .accordion-body {
+  max-height: 1400px;
+  padding: 0 14px var(--space-compact-3);
+  opacity: 1;
+}
+
+.api-page .accordion-card[open] {
+  border-color: #c3d4e6;
+  box-shadow: 0 14px 36px rgba(12, 12, 12, 0.06);
+}
+
+.api-page .accordion-body .collapsible-content {
+  padding: var(--space-compact-3);
+}
+
 .api-page .conversion-banner {
   background: linear-gradient(135deg, #3cb1c3, #3cc35a);
   color: #ffffff;
@@ -7262,3 +7357,12 @@ body.modal-open {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
+.api-page {
+  --space-compact-2: 8px;
+  --space-compact-3: 12px;
+  --space-compact-4: 16px;
+  --text-compact-title: 15px;
+  --text-compact-body: 14px;
+  --card-radius-compact: 14px;
+}
+
