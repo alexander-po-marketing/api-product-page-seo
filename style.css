@@ -5537,7 +5537,6 @@ body.api-page {
   gap: 16px;
   position: relative;
   z-index: 1;
-  min-height: 70vh;
 }
 
 .api-page .hero-artwork {
@@ -5582,7 +5581,7 @@ body.api-page {
 .api-page .hero-summary h1 {
   color: #ffffff;
   margin-bottom: 6px;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 1.12;
 }
 
